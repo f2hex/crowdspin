@@ -57,17 +57,17 @@ function injector(client) {
  * endpoint
  */
 function inject(url, conns, duration, count, pipelining) {
-		params = {
+    params = {
         url: url,
         method: 'POST',
         pipelining: pipelining,
         connections: conns,
         duration: duration,
         setupClient: injector
-		}
-		if (count != -1) {
+    }
+    if (count != -1) {
         params.amount = count;
-		}
+    }
     idgen = new cf.IdentityGenerator();
     cfgen = new cf.CodiceFiscale();
     let inst = autocannon(params, (err, res) => {});
@@ -84,51 +84,51 @@ function inject(url, conns, duration, count, pipelining) {
 function generate_fake_id() {
     idgen = new cf.IdentityGenerator();
     cfgen = new cf.CodiceFiscale();
-		console.log(create_id());
+    console.log(create_id());
 }
 
 yargs.usage('Usage: $0 <command> [options]')
-		.epilog("crowdspin - a tools to deal with fake citizen ids for testing purposes\nFranco Fiorese <franco.fiorese@dxc.com> 2019")
-		.showHelpOnFail(false, "Specify --help for available options");
+    .epilog("crowdspin - a tools to deal with fake citizen ids for testing purposes\nFranco Fiorese <franco.fiorese@dxc.com> 2019")
+    .showHelpOnFail(false, "Specify --help for available options");
 
 yargs.command('inject <url> [count] [duration] [connections] [pipelining]',
-							'Generates, continuously, fake valid citizen ids, complete with the Italian Fiscal Code.\nEach generate id is sent to a RESTful based service specified by a proper endpoint URL.', (yargs) => {
-									yargs.positional('url', {
-											describe: ' endpoint URL of the remote server to inject to',
-											type: 'string'
-									}).option('count', {
-											alias: 'i',
-											description: 'The number of injections to make before exiting. If set, duration is ignored.',
-											default: -1,
-											type: 'number'
-									}).option('duration', {
-											alias: 'd',
-											description: 'The number of seconds to run the injection. Default: 10',
-											default: 10,
-											type: 'number'
-									}).option('connections', {
-											alias: 'c',
-											description: 'The number of concurrent connections to use. Default: 10',
-											default: 10,
-											type: 'number'
-									}).option('pipelining', {
-											alias: 'p',
-											description: 'The number of pipelined requsests to use. Default: 1',
-											default: 1,
-											type: 'number'
-									})
-							},
-							(argv) => {
-									inject(argv.url, argv.connections, argv.duration, argv.count, argv.pipelining);
-							});
+              'Generates, continuously, fake valid citizen ids, complete with the Italian Fiscal Code.\nEach generate id is sent to a RESTful based service specified by a proper endpoint URL.', (yargs) => {
+                  yargs.positional('url', {
+                      describe: ' endpoint URL of the remote server to inject to',
+                      type: 'string'
+                  }).option('count', {
+                      alias: 'i',
+                      description: 'The number of injections to make before exiting. If set, duration is ignored.',
+                      default: -1,
+                      type: 'number'
+                  }).option('duration', {
+                      alias: 'd',
+                      description: 'The number of seconds to run the injection. Default: 10',
+                      default: 10,
+                      type: 'number'
+                  }).option('connections', {
+                      alias: 'c',
+                      description: 'The number of concurrent connections to use. Default: 10',
+                      default: 10,
+                      type: 'number'
+                  }).option('pipelining', {
+                      alias: 'p',
+                      description: 'The number of pipelined requsests to use. Default: 1',
+                      default: 1,
+                      type: 'number'
+                  })
+              },
+              (argv) => {
+                  inject(argv.url, argv.connections, argv.duration, argv.count, argv.pipelining);
+              });
 
 yargs.command('generate',
-							'Generate a fake id', (yargs) => {},
-							(argv) => {
-									generate_fake_id();
-							});
+              'Generate a fake id', (yargs) => {},
+              (argv) => {
+                  generate_fake_id();
+              });
 
 yargs.demandCommand(1, "You need to specify a least one command")
-		.help()
-		.wrap(80)
-		.argv
+    .help()
+    .wrap(80)
+    .argv
