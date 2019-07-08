@@ -138,6 +138,9 @@ Options:
                                                            [number] [default: 1]
 ```
 
+The `inject` command can generate, on a MacBook Pro i7, about 1K
+requests per second in a local network.
+
 ## Credits
 
 Franco Fiorese (main author).  This software is built using a lot of
