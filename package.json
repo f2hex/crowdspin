@@ -1,0 +1,11 @@
+{
+    "name": "citizengen",
+    "version": "0.5.0",
+    "description": "Citizen Data Ingestion Processor",
+    "author": "Franco Fiorese <francofiorese@dxc.com>",
+    "dependencies": {
+        "autocannon": "^4.0.0",
+        "crypto-js": "^3.1.9-1",
+        "yargs": "^13.2.4"
+    }
+}

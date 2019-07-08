@@ -1,0 +1,13 @@
+FROM node:12.0-alpine
+
+MAINTAINER Franco Fiorese <franco.fiorese@dxc.com>
+
+#RUN     apk --update add nginx
+
+WORKDIR /app
+COPY    package.json crowdspin.js citizengen.js geodata.js peoplenames.js  /app/
+#RUN    npm install npm@latest \
+RUN     npm install
+RUN     chmod +x /app/crowdspin.js
+
+ENTRYPOINT [ "/app/crowdspin.js" ]
