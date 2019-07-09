@@ -71,20 +71,18 @@ Mostly based on these guidelines:
 * Use UNIX-style newlines (\n), and a newline character as the last
   character of a file.
 * No trailing whitespace
-* Use Semicolons
-* 80 characters per line: try to stay within the 80 character per line
-  if possible
 * Opening braces go on the same line
-* Always inser curly braces in conditional also for single line statement
+* Always insert curly braces in conditional also for single line statement
 * Else clause on a new line just after the closed curly brace
 * Use of whitespace before and after the condition statement.
 * Declare one variable per var statement
 * Use UPPERCASE for Constants
-* Use the === operator as much as possible, to prevent stupid errors
-* Method chaining: one method per line should be used if you want to
-  chain methods
-* Requires At Top: Always put requires at top of file to clearly
-  illustrate a file's dependencies
+* In conditional test use the `===` operator as much as possible, to
+  prevent stupid errors
+* Method chaining: one method per line should be better to make easier
+  to read code
+* Put `require`s at top of the source file: to clearly illustrate a
+  file's dependencies
 
 ## Features
 
@@ -105,8 +103,8 @@ command:
 docker run -it --rm f2hex/crowdspin:0.5 generate
 ```
 
-to inject to continuous stream of HTTP RESTful request, with a JSON
-body containing a fake id record, run this command:
+to **inject a continuous stream of HTTP RESTful requests**, with a
+JSON body containing a fake id record, run this command:
 
 ```
 docker run -it --rm f2hex/crowdspin:0.5 inject http://target.endpoint.com:8080/idprocessor
