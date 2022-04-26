@@ -43,7 +43,7 @@ Docker (2019) installed, clone this repo, cd into it and run this
 command:
 
 ```
-dockre build -t crowdspin:tag .
+docker build -t crowdspin:tag .
 ```
 
 Where `tag` is any tag you would like to associate to the build.
@@ -100,14 +100,14 @@ Pretty simple, to **generate a single fake id record** run this
 command:
 
 ```
-docker run -it --rm f2hex/crowdspin:0.5 generate
+docker run --rm f2hex/crowdspin:0.5 generate
 ```
 
 to **inject a continuous stream of HTTP RESTful requests**, with a
 JSON body containing a fake id record, run this command:
 
 ```
-docker run -it --rm f2hex/crowdspin:0.5 inject http://target.endpoint.com:8080/idprocessor
+docker run --rm f2hex/crowdspin:0.5 inject http://target.endpoint.com:8080/idprocessor
 ```
 you need of course to pass a valid URL.
 This command provides the following additional options:
@@ -143,8 +143,9 @@ requests per second in a local network.
 
 Franco Fiorese (main author).  This software is built using a lot of
 open source software part of the node.js community.  A specific open
-source software project,
-[CodiceFiscaleJS](https://github.com/lucavandro/CodiceFiscaleJS)
+source software project.
+
+The code of the [CodiceFiscaleJS](https://github.com/lucavandro/CodiceFiscaleJS) project, 
 written by Luca Adalberto Vandro, for processing the Italian Fiscal
 code has been used.
 
