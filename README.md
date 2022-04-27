@@ -141,11 +141,8 @@ requests per second in a local network.
 
 ## Credits
 
-Franco Fiorese (main author).  This software is built using a lot of
-open source software part of the node.js community.  A specific open
-source software project.
+Franco Fiorese (main author).  This software is built using several open source software parts/packages of the `node.js` community.
 
-The code of the [CodiceFiscaleJS](https://github.com/lucavandro/CodiceFiscaleJS) project, 
-written by Luca Adalberto Vandro, for processing the Italian Fiscal
-code has been used.
+The code of a specific project, [CodiceFiscaleJS](https://github.com/lucavandro/CodiceFiscaleJS), written by Luca Adalberto Vandro
+and other contributors, for creating and processing the Italian citizen's "Fiscal code".
 
