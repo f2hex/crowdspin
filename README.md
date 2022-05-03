@@ -1,6 +1,6 @@
 # Crowdspin
 
-A sotware to simplify the creation and validation of digital ids for
+A software to simplify the creation and validation of digital ids for
 the public sector context. With **Crowdspin** it is possible to generate
 any number of digital identification records to be used to test
 software applications written for the public sector context.
