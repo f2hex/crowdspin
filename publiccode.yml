@@ -14,12 +14,12 @@ description:
       - fake id generation for testing
     genericName: crowdspin
     longDescription: |
-      _crowdspin_ è uno strumento per generare istanze di codice fiscale.
+      _crowdspin_ è uno strumento per generare istanze di identità immaginarie.
       Tipicamente viene generata una pseudo-identità che comprende queste informazioni: sesso, nome, cognome, data di nascita, luogo
       di nascita (comune, provincia, regione, CAP) e ovviamente il codice fiscale. È relativamente facile aggiungere anche altre
       informazioni utili alla necessità specifica.
       La generazione è completamente casuale, partendo da un ampio dizionario (personalizzabile) di nomi e cognomi. Le identità
-      generate sono puramente immaginarie, sebbene non vi sia la garanzia che posssano non corrispondere a una identità reale.
+      generate sono puramente immaginarie, sebbene non vi sia la garanzia che possano non corrispondere a una identità reale.
       In questa implementazione corrente sono previste due modalità di funzionamento: 1) generazione di una singola identità
       immaginaria, 2) generazione di una serie continua di identità immaginarie collegate a rispettive chimate API REST; ogni
       chiamata API ha un corpo JSON con tutti i dati del record di identità immaginario (incluso il codice fiscale). L'esecuzione in
