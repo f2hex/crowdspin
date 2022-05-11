@@ -1,0 +1,60 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - application-development
+  - it-development
+description:
+  it:
+    features:
+      - application stress testing
+      - application functional testing
+      - fake id generation for testing
+    genericName: crowdspin
+    longDescription: |
+      _crowdspin_ è uno strumento per generare istanze di codice fiscale.
+      Tipicamente viene generata una pseudo-identità che comprende queste informazioni: sesso, nome, cognome, data di nascita, luogo
+      di nascita (comune, provincia, regione, CAP) e ovviamente il codice fiscale. È relativamente facile aggiungere anche altre
+      informazioni utili alla necessità specifica.
+      La generazione è completamente casuale, partendo da un ampio dizionario (personalizzabile) di nomi e cognomi. Le identità
+      generate sono puramente immaginarie, sebbene non vi sia la garanzia che posssano non corrispondere a una identità reale.
+      In questa implementazione corrente sono previste due modalità di funzionamento: 1) generazione di una singola identità
+      immaginaria, 2) generazione di una serie continua di identità immaginarie collegate a rispettive chimate API REST; ogni
+      chiamata API ha un corpo JSON con tutti i dati del record di identità immaginario (incluso il codice fiscale). L'esecuzione in
+      questa modalità può produrre, in base al sistema sui cui opera, migliaia di identità al secondo.
+
+    shortDescription: crowdspin serve per generare identità immaginarie con associato un codice fiscale valido.
+developmentStatus: stable
+it:
+  conforme:
+    gdpr: true
+    lineeGuidaDesign: false
+    misureMinimeSicurezza: yes
+    modelloInteroperabilita: yes
+  countryExtensionVersion: '0.1'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+legal:
+  license: MIT
+  mainCopyrightOwner: DXC.technology
+  repoOwner: DXC.technology
+localisation:
+  availableLanguages:
+    - en
+  localisationReady: false
+maintenance:
+  contacts:
+    - name: Franco Fiorese
+  type: community
+name: crowdspin
+platforms:
+  - linux, windows
+releaseDate: '2022-05-11'
+softwareType: standalone/backend
+softwareVersion: 0.0.1
+url: 'https://github.com/DXC-Technology-Italy/crowdspin.git'
