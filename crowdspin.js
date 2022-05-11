@@ -3,7 +3,7 @@
  * Tool to to manipulate/generate/validate fake ids for Italian public
  * sector applications.
  *
- * Author: franco.fiorese@dxc.com
+ *  Author: f2coder@f2hex.net
  *  Date: July 2019
  *
  */
@@ -88,7 +88,7 @@ function generate_fake_id() {
 }
 
 yargs.usage('Usage: $0 <command> [options]')
-    .epilog("crowdspin - a tools to deal with fake citizen ids for testing purposes\nFranco Fiorese <franco.fiorese@dxc.com> 2019")
+    .epilog("crowdspin - a tools to deal with fake citizen ids for application testing purposes\nFranco Fiorese <f2coder@f2hex.net> 2019")
     .showHelpOnFail(false, "Specify --help for available options");
 
 yargs.command('inject <url> [count] [duration] [connections] [pipelining]',

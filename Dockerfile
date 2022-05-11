@@ -1,6 +1,6 @@
 FROM node:12.0-alpine
 
-MAINTAINER Franco Fiorese <franco.fiorese@dxc.com>
+MAINTAINER Franco Fiorese <f2coder@f2hex.com>
 
 #RUN     apk --update add nginx
 

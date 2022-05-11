@@ -2,7 +2,7 @@
     "name": "citizengen",
     "version": "0.5.0",
     "description": "Citizen Data Ingestion Processor",
-    "author": "Franco Fiorese <francofiorese@dxc.com>",
+    "author": "Franco Fiorese <f2coder@f2hex.net>",
     "dependencies": {
         "autocannon": "^4.0.0",
         "crypto-js": "^3.1.9-1",
