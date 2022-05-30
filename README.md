@@ -30,16 +30,15 @@ The application, at this moment, provides two specific functionalities:
 ## Motivation
 
 This software came out after a sort of challenge from colleagues about
-the most convienent way to create an record injection software for
-test purposes.
+the most convienent way to create massive records injection to test api-based applications.
+
 
 ## Building it
 
-The current version is built manually - a new update will include the
-capability to generate automatically a Docker image of the software.
+The current version requires to build it manually.
 
 To build the software just ensure you have the latest version of
-Docker (2019) installed, clone this repo, cd into it and run this
+Docker (2019 or newer) installed, clone this repo, cd into it and run this
 command:
 
 ```
@@ -109,7 +108,8 @@ JSON body containing a fake id record, run this command:
 ```
 docker run --rm f2hex/crowdspin:0.5 inject http://target.endpoint.com:8080/idprocessor
 ```
-you need of course to pass a valid URL.
+
+you need of course to pass a valid URL, the URL written above it is a fake one.
 This command provides the following additional options:
 
 ```
