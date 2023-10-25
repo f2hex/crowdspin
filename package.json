@@ -5,7 +5,7 @@
     "author": "Franco Fiorese <f2coder@f2hex.net>",
     "dependencies": {
         "autocannon": "^4.0.0",
-        "crypto-js": "^3.1.9-1",
+        "crypto-js": "^4.2.0",
         "yargs": "^13.2.4"
     }
 }
