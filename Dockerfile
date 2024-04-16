@@ -1,4 +1,4 @@
-FROM node:12.0-alpine
+FROM node:18.20.1-alpine
 
 MAINTAINER Franco Fiorese <f2coder@f2hex.com>
 
